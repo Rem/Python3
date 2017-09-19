@@ -1,0 +1,27 @@
+def score_to_rating(l, m, n, o, p):
+    """convert input to numeric"""
+    l = float(l)
+    m = float(m)
+    n = float(n)
+    o = float(o)
+    p = float(p)
+    """finding avg rating of middle 3 ratings"""
+    sum = l + m + n + o + p
+    i = min(l, m, n, o, p)
+    x = max(l, m, n, o, p)
+    av_rating = (sum - i - x) / 3
+    """score to string"""
+    if av_rating < 1:
+        rating = "Terrible"
+    if av_rating < 2:
+        rating = "Bad"
+    if av_rating < 3:
+        rating = "Okay"
+    if av_rating < 4:
+        rating = "Good"
+    else:
+        rating = "Excellent"
+    return rating
+
+
+print(score_to_rating(3, 4, 5, 2, 4))

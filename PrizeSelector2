@@ -1,0 +1,18 @@
+def which_prize(points):
+    """
+    Returns the prize-winning message, given a number of points
+    """
+    prize = None
+    if points <= 50:
+        prize = "wooden rabbit"
+    elif 150 <= points <= 180:
+        prize = "wafer-thin mint"
+    elif points >= 181:
+        prize = "penguin"
+        if prize:
+            return "Congratulations! You have won a " + prize + "!"
+    else:
+        return "Oh dear, no prize this time."
+
+
+print(which_prize(57))
