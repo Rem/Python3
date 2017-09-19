@@ -5,6 +5,8 @@ def median(numbers):
         # the median is the middle element
         middle_index = int(len(numbers) / 2)
         return numbers[middle_index]
+
+    # I am awesome
     else:
         # if the list has an even number of elements,
         # the median is the average of the middle two elements
